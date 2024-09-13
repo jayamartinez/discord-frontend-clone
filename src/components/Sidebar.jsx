@@ -6,6 +6,9 @@ import placeholder from "../assets/placeholder.jpg"
 
 
 const Sidebar = () => {
+
+  
+
   return (
     <div className='fixed top-0 left-0 h-screen
     w-[72px] m-0 flex flex-col align-middle bg-gray-900 text-white

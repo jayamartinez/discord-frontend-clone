@@ -22,6 +22,10 @@ export default {
           100: '#f2f3f5'
         },
         blue: "#5865f2",
+        "custom-gray": "#8f969e",
+      },
+      fontFamily: {
+        custom: ['gg-sans','sans-serif'],
       }
 
     },

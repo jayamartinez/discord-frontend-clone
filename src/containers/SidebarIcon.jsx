@@ -23,11 +23,11 @@ const SidebarIcon = ({ icon, text }) => {
 
     } else {
         return (
-            <div className='sidebar-icon group'>
+            <div className='relative sidebar-icon group'>
                 <div className='rounded-3xl overflow-hidden hover:rounded-xl transition-all duration-150 ease-linear'>
                     {icon}
                 </div>
-            <span className='sidebar-tooltip group-hover:scale-100'>{text}</span>
+                <span className='sidebar-tooltip group-hover:scale-100'>{text}</span>
             </div>
         )
     }

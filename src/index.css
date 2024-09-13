@@ -2,9 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@layer base {
+  @font-face {
+    font-family: 'gg-sans';
+    src: url('./assets/fonts/gg-sans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'gg-sans';
+    src: url('./assets/fonts/gg-sans-Medium.ttf') format('truetype');
+    font-weight: 500; /* Medium */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'gg-sans';
+    src: url('./assets/fonts/gg-sans-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Semi-Bold */
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'gg-sans';
+    src: url('./assets/fonts/gg-sans-Bold.ttf') format('truetype');
+    font-weight: 700; /* Bold */
+    font-style: normal;
+  }
+}
+
+
 @layer components {
   .sidebar-icon {
-    @apply  relative flex items-center justify-center
+    @apply  relative flex flex-col items-center justify-center
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
             rounded-3xl hover:rounded-xl
             transition-all duration-150 ease-linear;
@@ -35,10 +66,17 @@
     @apply absolute w-auto p-2 m-2 min-w-max left-14
     rounded-md shadow-md text-white bg-gray-900
     text-xs font-bold
-    transition-all duration-100 scale-0 origin-left;
+    transition-all duration-100 scale-100 origin-left;
   }
 
   .sidebar-icon:hover .sidebar-tooltip {
     @apply scale-100;
+  }
+
+  .dm-tooltip {
+    @apply absolute w-auto p-2 m-2 min-w-max left-[160px] top-[165px]
+    rounded-md shadow-md text-gray-400 bg-gray-900
+    text-xs font-bold
+    transition-all duration-100 scale-0 origin-bottom;
   }
 }
