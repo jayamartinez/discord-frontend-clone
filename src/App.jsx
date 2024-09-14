@@ -1,4 +1,4 @@
-import { Sidebar, DirectMessages } from "./components"
+import { Sidebar, DirectMessages, FriendsList } from "./components"
 
 function App() {
 
@@ -6,6 +6,7 @@ function App() {
     <>
     <div className="w-full h-full bg-gray-700">
     <DirectMessages />
+    <FriendsList />
     <Sidebar />
     
     </div>

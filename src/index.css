@@ -35,9 +35,9 @@
 
 @layer components {
   .sidebar-icon {
-    @apply  relative flex flex-col items-center justify-center
-            h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-            rounded-3xl hover:rounded-xl
+    @apply  relative flex flex-col items-center 
+            justify-center h-12 w-12 mt-2 mb-2 mx-auto 
+            shadow-lg rounded-3xl hover:rounded-xl
             transition-all duration-150 ease-linear;
   }
 
@@ -63,9 +63,9 @@
   }
 
   .sidebar-tooltip {
-    @apply absolute w-auto p-2 m-2 min-w-max left-14
-    rounded-md shadow-md text-white bg-gray-900
-    text-xs font-bold
+    @apply absolute w-auto p-2 m-2 
+    min-w-max left-14 rounded-md shadow-md text-white 
+    bg-gray-900 text-xs font-bold
     transition-all duration-100 scale-0 origin-left;
   }
 
@@ -74,9 +74,29 @@
   }
 
   .dm-tooltip {
-    @apply absolute w-[91px] /*91px*/ p-2 m-2 min-w-max h-[35px] left-[160px] top-[165px]
-    rounded-md shadow-md text-gray-400 bg-gray-900
+    @apply absolute w-[91px] /*91px*/ p-2 m-2 min-w-max 
+    h-[35px] left-[160px] top-[165px] rounded-md 
+    shadow-md text-gray-400 bg-gray-900
     text-sm font-medium text-center
     transition-all duration-100 scale-0 origin-bottom;
+  }
+
+  .friends-icon {
+    @apply my-0 mx-2 py-0.5 px-2 hover:bg-opacity-90 
+    hover:bg-gray-700 active:bg-gray-700 text-center 
+    rounded font-custom font-medium text-custom-gray
+    hover:text-white transition-all duration-100 
+    ease-linear;
+  }
+  .add-friends-icon {
+    @apply my-0 mx-2 py-0.5 px-2 bg-green-700 
+    active:bg-gray-800 text-center rounded 
+    font-custom font-medium text-white
+    active:text-green-600 transition-all duration-100 
+    ease-linear;
+  }
+
+  .friends-list {
+    @apply ml-[19.53rem] h-screen w-screen bg-gray-800
   }
 }

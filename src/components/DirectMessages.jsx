@@ -24,8 +24,8 @@ const DirectMessages = () => {
   return (
     <div className='fixed left-[72px] h-screen
     w-[240px] m-0 flex flex-col align-middle 
-    bg-gray-800 text-white shadow-lg z-0'>
-        <div className='w-[240px] h-12 shadow-sm shadow-gray-900'>
+    bg-gray-850 text-white shadow-lg z-0'>
+        <div className='w-[240px] h-12 shadow-sm border-gray-900 shadow-gray-900'>
             <button type='button' 
                     className='w-[220px] h-7 bg-gray-900 rounded m-2 my-2.5 text-sm text-left'>
                 <span className='font-custom font-medium m-2 text-custom-gray'>Find or start a conversation</span>
@@ -41,7 +41,7 @@ const DirectMessages = () => {
 
         <h2 className='flex gap-x-20 pt-[18px] pl-[18px] pr-[8px] 
             pb-[4px] font-custom font-semibold 
-            text-[12px] text-custom-gray'>
+            text-[12px] text-custom-gray '>
             <span>DIRECT MESSAGES</span>
             <div className='group'>
                 <DMIcon icon={<BsPlus size={20} />}/>
