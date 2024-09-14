@@ -1,21 +1,30 @@
 import React from 'react'
 import { DMButtons, DMIcon } from '../containers'
 import { BsPlus } from 'react-icons/bs'
+import placeholder from '../assets/placeholder.jpg'
 
 const DirectMessages = () => {
     
-    // const user1 = {
-    //   username:"Username",
-    //   displayName: "Display Name",
-    //   icon: {placeholder},
-    //   status: "online",
-    // }
+    const users = [{
+      username:"Username",
+      displayName: "Display Name",
+      icon: placeholder,
+      status: "online",
+    },
+    {
+        username:"Username2",
+        displayName: "Display Name 2",
+        icon: placeholder,
+        status: "offline",
+    },
+
+    ]
 
 
   return (
     <div className='fixed left-[72px] h-screen
     w-[240px] m-0 flex flex-col align-middle 
-    bg-gray-800 text-white shadow-lg'>
+    bg-gray-800 text-white shadow-lg z-0'>
         <div className='w-[240px] h-12 shadow-sm shadow-gray-900'>
             <button type='button' 
                     className='w-[220px] h-7 bg-gray-900 rounded m-2 my-2.5 text-sm text-left'>
@@ -24,19 +33,35 @@ const DirectMessages = () => {
         </div>
         <div className='w-[232px] h-2'></div>
 
-        <div className='flex flex-col items-start'>
-            <DMButtons icon="🙋" text="Friends"/>
-            <DMButtons icon="🧿" text="Nitro"/>
-            <DMButtons icon="🏪" text="Shop"/>
+        <div className='flex flex-col items-start '>
+            <DMButtons icon="🙋" text="Friends" gap="gap-x-2"/>
+            <DMButtons icon="🧿" text="Nitro" gap="gap-x-2"/>
+            <DMButtons icon="🏪" text="Shop" gap="gap-x-2"/>
         </div>
 
-        <h2 className='flex gap-x-20 pt-[18px] pl-2 pr-2 
-            pb-[18px] ml-2 font-custom font-semibold 
-            text-[12px] text-custom-gray group'>
+        <h2 className='flex gap-x-20 pt-[18px] pl-[18px] pr-[8px] 
+            pb-[4px] font-custom font-semibold 
+            text-[12px] text-custom-gray'>
             <span>DIRECT MESSAGES</span>
-            <DMIcon icon={<BsPlus size={20} />}/>
+            <div className='group'>
+                <DMIcon icon={<BsPlus size={20} />}/>
+            </div>
             {/* <button type='button'><BsPlus size={20} className='dm-tooltip group-hover:scale-100'/></button> */}
         </h2>
+
+        <div>
+            {
+                users.map((user, index) => {
+                    return(
+                        <div key={index}> 
+                            <DMButtons icon={<img src={user.icon} className='w-[32px] h-[32px] rounded-full'/>} text={user.displayName} gap="" />
+                        </div>
+                    )
+                })
+            }
+            
+            <DMButtons icon={<img src={placeholder} className='w-[32px] h-[32px] rounded-full'/>} text="Placeholder User" gap=""/>
+        </div>
 
         {/* <hr size="20" className='w-8 mx-1 border-gray-700 border-[1px] rounded-sm'/> */}
       

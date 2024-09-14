@@ -5,8 +5,9 @@ function App() {
   return (
     <>
     <div className="w-full h-full bg-gray-700">
-    <Sidebar />
     <DirectMessages />
+    <Sidebar />
+    
     </div>
     
     </>
